@@ -1,0 +1,15 @@
+{
+  "background_color": "blue",
+  "description": "Its a app",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "/applogo",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Sobloxsy App",
+  "short_name": "Sobloxsy",
+  "start_url": "/index.html"
+}
