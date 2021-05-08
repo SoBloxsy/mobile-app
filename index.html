@@ -26,11 +26,27 @@
   position: fixed;
   bottom: 0px;
   width: 100%;
-  height: 30px;
+  height: 40px;
   background: #404040;
   display: flex;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  color: white;
+  text-align: center;
+  font-family: gothammedium;
+  justify-content: center;
+  z-index: 50px;
+}
+
+.topbar {
+  position: fixed;
+  bottom: 93%;
+  width: 100%;
+  height: 40px;
+  background: #404040;
+  display: flex;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   color: white;
   text-align: center;
   font-family: gothammedium;
@@ -43,20 +59,24 @@ button {
   border-top-right-radius: 8px;
   border: none;
   height: 100%;
-  margin-right: 2px;
+  margin-right: 4px;
   text-align: center;
   background: #292929;
   color: white;
   font-family: gothambold;
   transition-duration: 0.4s;
-  width: 25%;
-  font-size: 17px;
+  width: 20%;
+  outline: none;
 }
 
 button:hover {
   content: "prefix";
   background: grey;
-  width: 30%;
+  width: 25%;
+}
+
+button:active {
+  background: white;
 }
 
 html, body {
@@ -66,27 +86,36 @@ html, body {
   color: #575e75;
   font-family: "gothambold", "gothammedium", Arial, sans-serif;
   height: 100%;
+  font-size: 13px;
+  text-align: center;
 }
-
-embed {
-  outline-width: 4px
-}
-
 </style>
 </head>
 <body>
-<!DOCTYPE html>
 <html>
   <body>
     <link rel="manifest" href="manifest.webmanifest">
-    <embed src="https://sobloxsy.com" style="width:100%; height:100%;">
+    <embed name="embedsobloxsy" src="https://sobloxsy.com" style="width:100%; height:100%;">
     <div class="bottombar">
-      <button>home</button> <button>games</button> <button>create</button>
-      <button>sus</button>
+      <button onclick="homebutton()">home</button> 
+      <button>games</button>
+      <button>create</button>
+      <button>chat</button>
+      <button>books</button>
+    </div>
+    <div class="topbar">
+      <p>SOBLOXSY APP TEST</p>
     </div>
   </body>
 </html>
 
+
+<script>
+function homebutton() {
+var embed = document.embeds["embedsobloxsy"]
+embed.src = "https://testplace.sobloxsy.com"
+}
+//# sourceURL=userscript.js
 </script>
 </body>
 </html>
