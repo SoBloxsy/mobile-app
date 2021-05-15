@@ -29,8 +29,6 @@
   height: 40px;
   background: #404040;
   display: flex;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
   color: white;
   text-align: center;
   font-family: gothammedium;
@@ -40,13 +38,12 @@
 
 .topbar {
   position: fixed;
-  bottom: 93%;
+  top: 0px;
   width: 100%;
-  height: 40px;
   background: #404040;
   display: flex;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   color: white;
   text-align: center;
   font-family: gothammedium;
@@ -55,31 +52,33 @@
 }
 
 button {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border: none;
+  border: 12px;
+  border-color: black;
   height: 100%;
-  margin-right: 4px;
   text-align: center;
-  background: #292929;
+  background: #0000001b;
   color: white;
   font-family: gothambold;
   transition-duration: 0.4s;
-  width: 20%;
+  width: 33%;
   outline: none;
+  font-size: auto;
+  font-size-adjust: 5px;
 }
 
 button:hover {
-  content: "prefix";
-  background: grey;
-  width: 25%;
+  border-top: 5px;
+  border-top-color: white;
+  background: rgba(255, 255, 255, 0.493);
+  width: 34%;
 }
 
 button:active {
   background: white;
 }
 
-html, body {
+html,
+body {
   display: block;
   margin: 0;
   background-color: #4280d7;
@@ -89,31 +88,30 @@ html, body {
   font-size: 13px;
   text-align: center;
 }
+
 </style>
 </head>
 <body>
-<html>
-  <body>
-    <link rel="manifest" href="manifest.webmanifest">
-    <embed name="embedsobloxsy" src="https://sobloxsy.com" style="width:100%; height:100%;">
-    <div class="bottombar">
-      <button onclick="homebutton()">home</button> 
-      <button>games</button>
-      <button>create</button>
-      <button>chat</button>
-      <button>books</button>
-    </div>
-    <div class="topbar">
-      <p>SOBLOXSY APP TEST</p>
-    </div>
-  </body>
-</html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="manifest" href="manifest.webmanifest" />
+
+<embed
+  name="soblox"style
+  src="https://sobloxsy.com"
+  style="width:100%; height:100%;"
+/>
+<div class="bottombar">
+  <button onclick="homebutton()">home</button> <button>create</button>
+  <button>books</button>
+</div>
+<div class="topbar"><p>SOBLOXSY MOBILE TEST</p></div>
 
 
 <script>
 function homebutton() {
 var embed = document.embeds["embedsobloxsy"]
-embed.src = "https://testplace.sobloxsy.com"
+
 }
 //# sourceURL=userscript.js
 </script>
